@@ -1,24 +1,11 @@
 <html lang="en">
-<script src="chrome-extension://ljdobmomdgdljniojadhoplhkpialdid/page/prompt.js"></script>
-<script src="chrome-extension://ljdobmomdgdljniojadhoplhkpialdid/page/runScript.js"></script>
-
 <head>
-    <script type="module">
-        import RefreshRuntime from "/@react-refresh"
-        RefreshRuntime.injectIntoGlobalHook(window)
-        window.$RefreshReg$ = () => { }
-        window.$RefreshSig$ = () => (type) => type
-        window.__vite_plugin_react_preamble_installed__ = true
-    </script>
-
-    <script type="module" src="/@vite/client"></script>
-
     <meta charset="UTF-8">
+    <script src="https://contentqa.blackhawknetwork.com/bingewidget/widget-1.0.0-dev55.js">
+    </script>
     <link rel="icon" type="image/svg+xml" href="/src/favicon.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vite App</title>
-    <script type="text/javascript" src="chrome-extension://mdnleldcmiljblolnjhpnblkcekpdkpa/libs/customElements.js"
-        class="__REQUESTLY__SCRIPT"></script>
     <style type="text/css" data-vite-dev-id="/css/App.module.css">
         ._root_5lp9e_1 {
             height: 100%;
@@ -1523,7 +1510,10 @@
                     </div>
                 </div>
                 <div class="_wanderful_072716_0000002_16twb_411"></div>
-                <div class="_sendTheWanderfulGiftOfAdventur_16twb_422">Come visit the Wanderful shop for a gifting adventure! Use the store locator to find our store locations</div>
+                <div class="_sendTheWanderfulGiftOfAdventur_16twb_422">Come visit the Wanderful shop for a gifting adventure! Use the store locator to find our store locations
+                    <div id="buyNowWidget" class="MuiBox-root css-1rd2ufg">Buy now</div>
+
+                </div>
                 <div class="_rectangle13362_16twb_438"></div>
                 <div class="_rectangle1337_16twb_446"></div>
                 <div class="_aboutWanderful_16twb_457">About Wanderful</div>
@@ -1721,9 +1711,37 @@
             </div>
         </div>
     </div>
-    <script type="module" src="/src/main.tsx?t=1714620325833"></script>
+    <script>
+        var buyNowWidgetConfig = {
+              // could be anything - just for your convenience to track it
+              id: 'buy-now-widget-new',
+              environment: 'test',
+              price: 45,
+              //minPrice: 10,
+              //maxPrice:100,
+              buttonBgColor: '#53a153',
+              buttonBgColorHover: '#135013',
+              inputTextColor: '#135013',
+              textColor: '#7d857e',
+              upc: '07675043308',
+              name: 'Navigate the Uncharted',
+              description: 'Exploration: Igniting the Spirit of Adventure.',
+              imageSrc: 'https://fpstatic.cashstar.com/faceplates/DWFMW3UZD/MASTER-1.jpeg',
+              paymentMerchantId: 'W6D02F5JY32J2VASZQVMBWXMTM',
+              merchantId: '60300005148',
+              tenantId: '9JLLQ508SG7P1GQQ9FB78602G8',
+            campaignId: 'J0NMZ9XNB2AJZQ0ZA937WLDF3H',
+            agreeToTermsMessage: '',
+            agreeToTermsUrl: 'https://blackhawknetwork.com/privacy-policy',
+            agreeToTermsUrlLabel: '',
+            firstName: 'John',
+            lastName: 'Doe',
+            email: 'john.doe@bhn.com'
+        };
+        var buyNowWidget = new BuyNowWidget(buyNowWidgetConfig);
+        buyNowWidget.render('#buyNowWidget');
+        </script>
+        
 
-
-</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
 
 </html>
