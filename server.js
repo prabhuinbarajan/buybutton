@@ -5,6 +5,10 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 // sendFile will go here
+app.use('/static', express.static('./www'))
+app.use('/css', express.static('./www/css'))
+app.use('/assets', express.static('./www/assets'))
+
 app.get('/', function(req, res) {
     
     try {
